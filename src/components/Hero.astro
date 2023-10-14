@@ -1,16 +1,16 @@
 ---
 import { Icon } from 'astro-icon'
 
-const { src = 'hacker_dark_illlustration.png' } = Astro.props
+const { src = 'dark_mode_hacker.png' } = Astro.props
 ---
 
-<section class="hero my-24">
+<section class="my-24">
   <div class="container">
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <img class="hidden lg:block hero" src={src} alt="hacker woman" decoding="async" />
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">Tara Cloud</span></slot>
+          <slot><span class="text-gradient">Tara.Cloud</span></slot>
         </h1>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
           <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
@@ -40,8 +40,7 @@ const { src = 'hacker_dark_illlustration.png' } = Astro.props
   }
 
   .hero {
-    border-radius: 50%;
-    box-shadow: 0 0 15px 5px rgba(72, 138, 186, 0.7);
+    border-radius: 15%;
   }
 
   :global(.darkmode .text-gradient) {
