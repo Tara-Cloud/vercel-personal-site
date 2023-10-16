@@ -1,19 +1,18 @@
 ---
 import { Icon } from 'astro-icon'
-
-const { src = 'light_mode_hacker.jpeg' } = Astro.props
+import HeroImage from './HeroImage';
 ---
-<section class="relative my-12">
+<section class="my-12">
   <div class="container">
-    <div class="grid grid-cols-1 items-center gap-8">
-      <!-- <img id="hero-image" class="hidden lg:block hero w-1/2 mx-auto" src={src} alt="hacker woman" decoding="async" /> -->
-      <div class="img-toggle w-1/2 mx-auto"></div>
-      <div class="test-div"></div>"
-      <div class="flex flex-col items-center gap-8">
-        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">TARA CLOUD</span></slot>
+    <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
+      <img id="hero-image" class="hidden lg:block hero w-3/10 mx-auto" src='night_mode_hacker.png' alt="hacker woman" decoding="async" />
+      <!-- <div class="img-toggle hidden lg:block hero w-1/2"></div> -->
+      <!-- <HeroImage lightModeImage='light_mode_hacker.png' darkModeImage='dark_mode_hacker.png' client:load /> -->
+      <div class="flex flex-col items-center gap-8 md:items-start">
+        <h1 class="text-center text-6xl md:text-left lg:text-7xl w-full">
+          <slot><span class="text-gradient">TARA.CLOUD</span></slot>
         </h1>
-        <div class="flex flex-col gap-3 min-[500px]:flex-row">
+        <div class="flex flex-col gap-3 min-[500px]:flex-row w-full md:w-auto">
           <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
             <Icon pack="ion" name="logo-github" />
             GitHub
@@ -31,7 +30,7 @@ const { src = 'light_mode_hacker.jpeg' } = Astro.props
             href="https://www.linkedin.com/in/taraschoenherr/"
           >
             <Icon pack="ion" name="logo-instagram" />
-            Insta
+            Instagram
           </a>
         </div>
       </div>
@@ -65,7 +64,7 @@ const { src = 'light_mode_hacker.jpeg' } = Astro.props
   }
 
   :global(.darkmode) .img-toggle {
-    background: url(dark_mode_hacker.png) center/cover no-repeat;
+    background: url(night_mode_hacker.png) center/cover no-repeat;
   }
 
   .test-div{
